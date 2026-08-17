@@ -1,17 +1,15 @@
-import json
+title=input("Enter ur task: ")
+tasks=[]
 
-with open("s.json", "r") as f:
-    data = json.load(f)
-    for i in data:
-        
-        print("ID:" + str(i["ID"]))
+def add_task(tasks, title):
+    new_task={
+        "ID" : len(tasks)+1,
+        "Title" : title,
+        "Done" : False
+    }
 
-        print("Titel:" + str(i["Titel"]))
+    tasks.append(new_task)
+    return tasks
 
-        if(i["Done"] == True):
-            print("Done")
-        else:
-            print("still not finished")
-        
-        print("---------------------------")
-        
+add_task(tasks, title)
+print(tasks)
