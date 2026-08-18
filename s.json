@@ -1,12 +1,1 @@
-[
-    {
-         "ID" :  43 ,
-         "Titel" : "test" ,
-          "Done" : false
-    } , 
-    {
-         "ID" :  42 ,
-         "Titel" : "bah" ,
-          "Done" : true
-    }
-]
+[{"ID": 1, "Title": "ahhhhhhhhh", "Done": false}, {"ID": 2, "Title": "gob", "Done": false}, {"ID": 3, "Title": "nob", "Done": false}, {"ID": 4, "Title": "python -u \"c:\\Users\\MSI\\Desktop\\ahhhh\\to do list with a team\\W_storage.py\"", "Done": false}]

@@ -1,15 +1,39 @@
-title=input("Enter ur task: ")
-tasks=[]
+import json
 
-def add_task(tasks, title):
-    new_task={
-        "ID" : len(tasks)+1,
-        "Title" : title,
-        "Done" : False
-    }
 
-    tasks.append(new_task)
-    return tasks
+def append_to_json(j , new):
+    with open(j , "r") as f:
+        try:
+            data = json.load(f)
+        except (json.JSONDecodeError):
+            data=[]
 
-add_task(tasks, title)
-print(tasks)
+        data.append(new)
+        with open(j , "w") as f:
+            json.dump(data , f)
+
+
+def add_task(title):
+    with open("s.json", "r") as f:
+        try:
+            T = json.load(f)
+        except(json.JSONDecodeError):
+            T = []
+        new_task={
+            "ID" : len(T)+1,
+            "Title" : title,
+            "Done" : False
+        }
+        
+    append_to_json("s.json" , new_task)
+    return
+
+
+# while(1):
+#     title=input("Enter ur task: ")     #for testing
+#     add_task(title)
+
+
+    
+    
+    
