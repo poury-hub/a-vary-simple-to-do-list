@@ -8,9 +8,9 @@ def append_to_json(j , new):
         except (json.JSONDecodeError):
             data=[]
 
-        data.append(new)
-        with open(j , "w") as f:
-            json.dump(data , f)
+    data.append(new)
+    with open(j , "w") as f:
+        json.dump(data , f)
 
 
 def add_task(title):
