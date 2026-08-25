@@ -19,7 +19,3 @@ def Doner(id):
         with open("s.json" , 'w') as ff:
             json.dump(data , ff)
         return True
-
-
-if(Doner(4)):         #for test
-    print("ok")
