@@ -1,6 +1,7 @@
 import json
 
 def Doner(id):
+    id = id - 1
     with open("s.json" , "r") as f:
         try:
             data = json.load(f)
@@ -20,5 +21,5 @@ def Doner(id):
         return True
 
 
-# if(Doner(1)):         #for test
-#     print("ok")
+if(Doner(4)):         #for test
+    print("ok")
