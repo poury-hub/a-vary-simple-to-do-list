@@ -3,7 +3,9 @@ import helpers
 
 
 def Done(id):
-    index = id - 1
+    if id.isdigit() == False:
+        return False
+    index = int(id) - 1
     if(helpers.getdata() == False):
         return False
     else:
@@ -21,7 +23,9 @@ def Done(id):
 
 
 def Deleter(id):
-    index = id - 1
+    if id.isdigit() == False:
+        return False
+    index = int(id) - 1
     if(helpers.getdata() == False):
         return False
     else:
