@@ -1,3 +1,6 @@
+import json
+
+
 def GoToJson(data):
     with open("s.json" , "w") as ff:
         json.dump(data , ff , indent = 4)

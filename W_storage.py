@@ -1,31 +1,29 @@
 import json
+import helpers
 
-
-def append_to_json(j , new):
-    with open(j , "r") as f:
-        try:
-            data = json.load(f)
-        except (json.JSONDecodeError):
-            data=[]
+def append_to_json(new):
+    if(helpers.getdata() == False):
+        data = []
+    else:
+        data = helpers.getdata()
 
     data.append(new)
-    with open(j , "w") as f:
-        json.dump(data , f)
+    helpers.GoToJson(data)
 
 
 def add_task(title):
-    with open("s.json", "r") as f:
-        try:
-            T = json.load(f)
-        except(json.JSONDecodeError):
-            T = []
+    if(helpers.getdata() == False):
+        T = []
+    else:
+        T = helpers.getdata()
+        
         new_task={
             "ID" : len(T)+1,
             "Title" : title,
             "Done" : False
         }
         
-    append_to_json("s.json" , new_task)
+    append_to_json(new_task)
     return
 
 
