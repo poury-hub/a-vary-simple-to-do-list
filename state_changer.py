@@ -1,6 +1,8 @@
 import json
+import helpers 
 
-def Doner(id):
+
+def Done(id):
     index = id - 1
     if(helpers.getdata() == False):
         return False
@@ -18,13 +20,13 @@ def Doner(id):
         return True
 
 
-def deleter(id):
+def Deleter(id):
     index = id - 1
-    with open("s.json" , "r") as f:
-        try:
-            data = json.load(f)
-        except (json.JSONDecodeError):
-            return False
+    if(helpers.getdata() == False):
+        return False
+    else:
+        data = helpers.getdata()
+
     try:
         del data[index]
 
@@ -33,6 +35,7 @@ def deleter(id):
 
     else:
         for i in range(index , len(data)):
-            data[i]["ID"] = i + 1
-
+            data[i]["ID"] = i + 1  #index in is always 1 less that ID 
+        helpers.GoToJson(data)
+        return True
 

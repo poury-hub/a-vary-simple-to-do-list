@@ -2,7 +2,7 @@
     {
         "ID": 1,
         "Title": "ahhhhhhhhh",
-        "Done": false
+        "Done": true
     },
     {
         "ID": 2,
@@ -16,7 +16,7 @@
     },
     {
         "ID": 4,
-        "Title": "python -u \"c:\\Users\\MSI\\Desktop\\ahhhh\\to do list with a team\\W_storage.py\"",
+        "Title": "test",
         "Done": false
     },
     {
@@ -27,16 +27,11 @@
     {
         "ID": 6,
         "Title": "test",
-        "Done": false
+        "Done": true
     },
     {
         "ID": 7,
-        "Title": "test",
-        "Done": false
-    },
-    {
-        "ID": 8,
         "Title": "new things",
-        "Done": false
+        "Done": true
     }
 ]
